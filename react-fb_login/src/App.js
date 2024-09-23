@@ -30,8 +30,6 @@ function Home({fbpic,fbdata}){
 }
 
 
-
-
 function App() {
     const [login, setLogin] = useState(false);  // Set up login
     const [data, setData] = useState({});       // Set up data
@@ -50,8 +48,8 @@ function App() {
 
   return (
     <div class="container">
-      <Card>
-          <Card.Header>
+      <Card style={{ width: '800px'}} className="mx-auto mt-5">
+          <Card.Header className="pb-4">
             <h1>My React App</h1>
           </Card.Header>
           <Card.Body>
@@ -66,7 +64,7 @@ function App() {
                   appId="1230986128111636"
                   autoLoad={false}
                   fields="name,email,picture"
-                  scope="public_profile,user_friends"
+                  scope="public_profile"
                   callback={responseFacebook}
                   icon="fa-facebook"
                 />
